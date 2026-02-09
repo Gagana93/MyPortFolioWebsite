@@ -1,0 +1,127 @@
+.pub {
+    text-align: left;
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: var(--background-card);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.pub:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pub::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.pub-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.pub-title a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.pub-title a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.pub-venue {
+    font-size: 14px;
+    color: var(--secondary-dark);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.pub-authors {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Google Scholar section styling */
+.google-scholar-section {
+    margin-top: 40px;
+    padding: 25px;
+    background: linear-gradient(to right, rgba(37, 99, 235, 0.05), rgba(16, 185, 129, 0.05));
+    border-radius: var(--border-radius-md);
+    text-align: center;
+}
+
+.google-scholar-link {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: var(--shadow-md);
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.google-scholar-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    color: var(--primary-dark);
+}
+
+.google-scholar-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .pub {
+        padding: 15px 15px 15px 20px;
+        margin-bottom: 25px;
+    }
+
+    .pub-title {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .pub-venue {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    .pub-authors {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .google-scholar-section {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+
+    .google-scholar-link {
+        padding: 10px 15px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: center;
+    }
+}

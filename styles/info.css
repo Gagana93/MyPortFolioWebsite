@@ -1,0 +1,129 @@
+.gradient-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg, 
+        #ffffff,  /* Pure white */
+        #f0f8ff,  /* Alice Blue */
+        #f5f5f5,  /* White Smoke */
+        #e6f2ff,  /* Very light blue */
+        #f0f0f0,  /* Light gray */
+        #e1ebf7,  /* Another light blue shade */
+        #fafafa   /* Very light gray, almost white */
+    );
+    background-size: 300% 300%;
+    animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+#dhead {
+    width: 100%;
+    /* height: 100vh; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 80px 20px; 
+}
+
+#dpic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: opacity 0.05s ease-in-out;
+}
+
+#ddesc h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+#ddesc h2 {
+    font-size: 1em;
+    margin: 10px 0;
+    color: gray;
+}
+
+#dico {
+    margin: 20px 0;
+}
+
+#dico a, #dico img {
+    position: relative;
+    display: inline-block;
+}
+
+.iico {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.iico:hover {
+    transform: translateY(-2px);
+}
+
+#dico a::after, #dico img::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
+}
+
+#dico a:hover::after, #dico img:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+#dico img#iemail::after {
+    content: attr(title);
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.resume-button .iico {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    /* filter: brightness(0) invert(1);  This ensures the icon is white */
+}
