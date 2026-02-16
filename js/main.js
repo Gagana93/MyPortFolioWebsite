@@ -7,7 +7,7 @@ let e_is_shown = false;
 
 document.getElementById('iemail').addEventListener("click", function(){
     let demail = document.getElementById('demail');
-    let msg = "nxfunlzragn24" + "@" + "tznvy.pbz<oe>" + "zragn.fn@abegurnfgrea.rqh";
+    let msg = "tntnanantraqen02@tznvy.pbz";
     demail.innerHTML = rot13(msg);
     demail.style.opacity = e_is_shown ? 0 : 1;
     e_is_shown = !e_is_shown;
