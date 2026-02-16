@@ -106,7 +106,7 @@
 .resume-button {
     display: inline-flex;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--text-secondary);
     color: var(--text-light);
     padding: 10px 20px;
     border-radius: 25px;
@@ -117,7 +117,7 @@
 }
 
 .resume-button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--background-dark);
     transform: translateY(-2px);
 }
 
