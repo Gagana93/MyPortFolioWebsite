@@ -106,7 +106,7 @@
     color: var(--text-primary);
     transition: all 0.3s ease;
     box-shadow: var(--shadow-sm);
-    text-align: left;
+    text-align: center;
 }
 
 .skill-item:hover {
