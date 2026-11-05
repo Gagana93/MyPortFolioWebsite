@@ -32,15 +32,18 @@ const iconMoon = document.getElementById('icon-moon');
 function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    if (theme === 'dark') {
-        iconSun.style.display = 'block';
-        iconMoon.style.display = 'none';
-        themeToggle.setAttribute('aria-label', 'Switch to light mode');
-    } else {
-        iconSun.style.display = 'none';
-        iconMoon.style.display = 'block';
-        themeToggle.setAttribute('aria-label', 'Switch to dark mode');
-    }
+    iconSun.style.display = 'none';
+    iconMoon.style.display = 'block';
+    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+    // if (theme === 'dark') {
+    //     iconSun.style.display = 'block';
+    //     iconMoon.style.display = 'none';
+    //     themeToggle.setAttribute('aria-label', 'Switch to light mode');
+    // } else {
+    //     iconSun.style.display = 'none';
+    //     iconMoon.style.display = 'block';
+    //     themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+    // }
 }
 
 const savedTheme = localStorage.getItem('theme') ||
