@@ -37,10 +37,12 @@ function applyTheme(theme) {
         iconSun.style.display = 'block';
         iconMoon.style.display = 'none';
         themeToggle.setAttribute('aria-label', 'Switch to light mode');
+        console.log('Dark mode enabled');
     } else {
         iconSun.style.display = 'none';
         iconMoon.style.display = 'block';
         themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+         console.log('Dark mode enabled');
     }
 }
 
